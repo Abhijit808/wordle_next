@@ -1,0 +1,58 @@
+.main{
+  display: flex;
+  gap: .2rem;
+}
+.letter{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ border: 2px solid black;
+ color: #505a5cf6;
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: none;
+}
+.center{
+  width: 100%;
+  aspect-ratio: 1/.6;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  gap: .2rem;
+}
+.green{
+  background-color: hsl(120, 87%, 18%);
+  color: black;
+}
+.red{
+  background-color: hsl(0, 83%, 65%);
+  color: rgb(255, 255, 255);
+}
+.over{
+ color:yellow
+}
+.K_wrapper{
+  padding: 0;
+}
+.K_layout{
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 .6rem;
+}
+.lay{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  color: #505a5cf6;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: none;
+}
+.text{
+text-align: center;
+}
