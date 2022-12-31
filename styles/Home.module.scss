@@ -13,13 +13,24 @@
  font-family: 'Times New Roman', Times, serif;
  font-weight: none;
 }
+.flex{
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  align-items: center;
+  justify-content: center;
+}
 .center{
   width: 100%;
-  aspect-ratio: 1/.6;
-  display: grid;
-  align-content: center;
+  aspect-ratio: 1/.4;
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
   justify-content: center;
   gap: .2rem;
+  @media screen and (max-width:260px){
+    aspect-ratio: 1;
+  }
 }
 .green{
   background-color: hsl(120, 87%, 18%);
@@ -33,7 +44,7 @@
  color:yellow
 }
 .K_wrapper{
-  padding: 0;
+  width: 100%;
 }
 .K_layout{
   display: flex;

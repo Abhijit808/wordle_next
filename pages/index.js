@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from "react"
-
 export default function Home() {
   const [word, setword] = useState("")
   const [chance, setchance] = useState(0)
@@ -12,7 +11,7 @@ export default function Home() {
     const get_Word = async () => {
       const data = await fetch("/api/words");
       const result = await data.json()
-      console.log(result.random);
+      // console.log(result.random);
       setcorrect(result.random)
     }
     get_Word();
@@ -46,7 +45,7 @@ export default function Home() {
           location.reload();
           return;
         }
-        console.log(word);
+        // console.log(word);
         const newguess = [...guess]
         newguess[guess.findIndex(index => index == "")] = word;
         setguess(newguess)
@@ -75,13 +74,13 @@ export default function Home() {
       window.removeEventListener("keyup", handlekeyup)
     }
   }, [chance, word, guess])
-const Guess =  word.split('').filter((char,i)=>{
-  guess[i]===word[i]
-})
-console.log(Guess);
 
   return (
     <>
+    <Head>
+        <title>Wordle</title>
+    </Head>
+    <div className={styles.flex}> 
       <div className={styles.center}>
         <h1 className={styles.text}>WORDLE</h1>
         <h3 className={styles.text}>Attemts remaing {7 - (chance + 1)}</h3>
@@ -113,7 +112,7 @@ console.log(Guess);
           })
         }
       </div>
-      <div className={styles.K_wrapper}>
+      <div className={styles.K_wrapper} onClick={()=>{alert("you need a keyboard to play")}}>
         {
           keyboard.map((keys, index) => {
             return (
@@ -134,6 +133,7 @@ console.log(Guess);
 
 
         }
+      </div>
       </div>
     </>
   )
