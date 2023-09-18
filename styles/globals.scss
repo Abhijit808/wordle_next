@@ -5,10 +5,16 @@
 }
 body{
   width: 100vw;
-  background-color: #2426;
-  height: 100vh;
-  overflow: hidden;
+    background-color: #2426;
+    height: 100vh;
+  overflow: scroll;
 }
 .center{
   text-align: center;
+}
+@media screen and (min-width: 480px) {
+  body{
+   
+    overflow: hidden;
+  }
 }

@@ -45,6 +45,7 @@
 }
 .K_wrapper{
   width: 100%;
+  cursor:pointer;
 }
 .K_layout{
   display: flex;
@@ -63,6 +64,18 @@
   color: #505a5cf6;
   font-family: 'Times New Roman', Times, serif;
   font-weight: none;
+}
+.Hot{
+  width: 6rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  color: #505a5cf6;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: none;
+
 }
 .text{
 text-align: center;
